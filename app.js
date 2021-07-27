@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
   }
 
   // display today's date and the number of days till Christmas
-  res.send('Today is ' + month + ' ' + date + ', ' + year + '.\n ' + message);
+  res.send('Today is ' + month + ' ' + date + ', ' + year + '. ' + message);
 });
 
 app.listen(8080, function () {
