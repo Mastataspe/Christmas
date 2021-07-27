@@ -22,8 +22,9 @@ app.get('/', function (req, res) {
   let christmas = new Date(year, 11, 25);
 
   // Calculate how many days till Christmas
-  let daysTillChristmas = Math.floor((christmas.getTime() - currentDate.getTime()) / (1000*60*60*24));
+//   let daysTillChristmas = Math.floor((christmas.getTime() - currentDate.getTime()) / (1000*60*60*24));
 
+    daysTillChristmas = 0;
   // Message
   var message = null;
 
