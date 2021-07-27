@@ -24,8 +24,17 @@ app.get('/', function (req, res) {
   // Calculate how many days till Christmas
   let daysTillChristmas = Math.floor((christmas.getTime() - currentDate.getTime()) / (1000*60*60*24));
 
+  // Message
+  var message = null;
+
+  if (daysTillChristmas > 0){
+    message = "There are " + daysTillChristmas + " days until Christmas.";
+  } else {
+    message = "Merry Christmas! 🎄 🎁"
+  }
+
   // display today's date and the number of days till Christmas
-  res.send('Today is ' + month + ' ' + date + ', ' + year + '.\n ' + 'There are ' + daysTillChristmas + ' days until Christmas.');
+  res.send('Today is ' + month + ' ' + date + ', ' + year + '.\n ' + message);
 });
 
 app.listen(8080, function () {
