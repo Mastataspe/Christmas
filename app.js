@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
   var message = null;
 
   if (daysTillChristmas > 0){
-    message = daysTillChristmas + " day(s) until Christmas.";
+    message = "\nThere are " + daysTillChristmas +  " days until Christmas.";
   } else {
     message = "Merry Christmas! 🎄 🎁"
   }
